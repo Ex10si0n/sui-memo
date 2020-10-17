@@ -19,8 +19,7 @@ More functions to be developed
     if len(sys.argv) == 1:
         print(usage)
         return
-
-    output_dir = 'data'
+    output_dir = os.getenv("HOME")
     list_dir = os.listdir(output_dir)
 
     if len(sys.argv) == 3:
@@ -37,7 +36,7 @@ More functions to be developed
                 fw.write(jsObj)
                 fw.close()
         else:
-            os.system('touch data/mapping.json')
+            os.system('touch ~/mapping.json')
             jsObj = json.dumps(mapping, ensure_ascii=False)
             with open(pjoin(output_dir, 'mapping.json'), "w") as fw:
                 fw.write(jsObj)
