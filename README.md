@@ -1,6 +1,8 @@
 # sui-memo
 a simple CLI mapping-based memo
 
+![](present.gif)
+
 ## Usage
 ```
 Sui-Memo is a simple, fast CLI Memo.
